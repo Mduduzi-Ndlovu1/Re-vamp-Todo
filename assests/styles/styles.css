@@ -73,13 +73,35 @@ textarea {
       border: none;
       border-bottom: 1px solid #ccc;
       padding: 10px;
-      width: 100%;
+      width: 30vw;
       box-sizing: border-box;
       color: rgb(53, 53, 53);
       outline: none;
       border-radius: 8px;
       margin: 20px 5px;
+      
     }
 
-    
+.hidden {
+    display: none;
+}
+
+.container {
+    background-color: rgba(182, 182, 182, 0.171);
+    border-radius: 8px;
+    border: 2px solid rgb(165, 212, 240);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.task-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border-style: none;
+}
+
+
 
