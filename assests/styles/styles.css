@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.landing-page {
+    height: 100dvh;
+    width: 100%;
+    background: url(../imgs/Landing-page/abstract-paper-background-concept.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.5); /* Adjust the transparency (alpha value) as needed */
+    backdrop-filter: blur(10px); 
+    position: relative;
+    width: 100%;
+}
+
+.type-of-button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    gap: 40px;
+}
+.logo {
+    width: auto;
+    height: 50px;
+}
+
+.task-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    margin: 2rem 2rem;
+    height: 100%;
+}
+
+.task-section {
+    display: flex;
+    flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 20px;  
+      text-align: center;
+      height: 80vh;
+      background: rgba(161, 161, 161, 0.445); 
+      backdrop-filter: blur(10px);       
+}
+.motiv-section {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 20px;  
+      text-align: center;
+      height: 80vh;
+      background: rgba(161, 161, 161, 0.445); 
+      backdrop-filter: blur(10px); 
+      
+}
+
+input,
+textarea {
+    background: rgba(255, 255, 255, 0.5); /* Adjust the transparency (alpha value) as needed */
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      color: rgb(53, 53, 53);
+      outline: none;
+      border-radius: 8px;
+      margin: 20px 5px;
+    }
+
+    
+
