@@ -8,16 +8,16 @@ body {
 }
 
 .landing-page {
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
     background: url(../imgs/Landing-page/abstract-paper-background-concept.jpg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.5); /* Adjust the transparency (alpha value) as needed */
-    backdrop-filter: blur(10px); 
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
     position: relative;
     width: 100%;
 }
@@ -27,8 +27,9 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px auto;
-    gap: 40px;
+    gap: 20px;
 }
+
 .logo {
     width: auto;
     height: 50px;
@@ -36,51 +37,38 @@ body {
 
 .task-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 2rem;
     margin: 2rem 2rem;
-    height: 100%;
 }
 
-.task-section {
-    display: flex;
-    flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      border-radius: 20px;  
-      text-align: center;
-      height: 80vh;
-      background: rgba(161, 161, 161, 0.445); 
-      backdrop-filter: blur(10px);       
-}
+.task-section,
 .motiv-section {
     display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      border-radius: 20px;  
-      text-align: center;
-      height: 80vh;
-      background: rgba(161, 161, 161, 0.445); 
-      backdrop-filter: blur(10px); 
-      
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(161, 161, 161, 0.445);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
 }
 
 input,
 textarea {
-    background: rgba(255, 255, 255, 0.5); /* Adjust the transparency (alpha value) as needed */
-      border: none;
-      border-bottom: 1px solid #ccc;
-      padding: 10px;
-      width: 30vw;
-      box-sizing: border-box;
-      color: rgb(53, 53, 53);
-      outline: none;
-      border-radius: 8px;
-      margin: 20px 5px;
-      
-    }
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: rgb(53, 53, 53);
+    outline: none;
+    border-radius: 8px;
+    margin: 20px 0;
+}
 
 .hidden {
     display: none;
@@ -91,17 +79,58 @@ textarea {
     border-radius: 8px;
     border: 2px solid rgb(165, 212, 240);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .task-list {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 button {
     border-style: none;
 }
 
+#taskList,
+#goalList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
+/* Add styling for task and goal items within the lists */
+#taskList .task-list,
+#goalList .task-list {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+#taskList .task-list h2,
+#goalList .task-list h2 {
+    margin-bottom: 10px;
+}
+
+#taskList .task-list p,
+#goalList .task-list p {
+    margin-bottom: 5px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+    .type-of-button-section {
+        gap: 40px;
+    }
+
+    .task-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .task-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

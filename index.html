@@ -35,7 +35,7 @@
             </div>
           </nav>
 
-    <main>
+    
 
         <div class="type-of-button-section">
           <button type="button" class="btn btn-outline-dark " id="createTaskBtn">Create Task</button>
@@ -45,12 +45,16 @@
         <div class="task-container hidden" id="task-section">
             <div class="task-section ">
                 <h2>Enter Task Information</h2>
-                <form>
+                <form id="task-form">
                     <div class="mb-3">
+
                       <input type="text" class="input" id="task-name" placeholder="Please Enter Task Name" aria-describedby="Task-name">
+
                     </div>
                     <div class="mb-3">
-                      <textarea class="" id="" cols="400" rows="10" placeholder="Describe your task and deliverables" class="textarea"></textarea>
+
+                      <textarea class="" id="task-desc" cols="400" rows="10" placeholder="Describe your task and deliverables" class="textarea"></textarea>
+
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -91,12 +95,13 @@
         <div class="task-container " id="goal-section">
           <div class="task-section ">
               <h2>Enter Your Goal Information</h2>
-              <form>
+              <form id="goal-form">
                   <div class="mb-3">
-                    <input type="text" class="input" id="task-name" placeholder="What goal are you trying to Archieve" aria-describedby="Goal-name">
+                    <input type="text" class="input" id="goal-name" placeholder="What goal are you trying to Archieve" aria-describedby="Goal-name">
                   </div>
                   <div class="mb-3">
-                    <textarea class="" id="" cols="400" rows="10" placeholder="Briefly discuss how you will Archieve this Goal" class="textarea"></textarea>
+                    <textarea class="" id="goal-desc" cols="400" rows="10" placeholder="Briefly discuss how you will Archieve this Goal" class="textarea"></textarea>
+                    
                     <input type="date" name="Goal-date" id="Goal-date">
                   </div>
                   
@@ -120,7 +125,7 @@
                 </div>
           </div>
       </div>
-
+    </div>
 
       <div class="accordion" id="accordionPanelsStayOpenExample">
         <!-- Tasks Section -->
@@ -131,26 +136,23 @@
             </button>
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-            <div class="accordion-body">
+            <div class="accordion-body" id="task-list" >
 
-              <div class="container">
-                <div class="task-list  mx-2 my-3">
+                <div class="task-list container   my-3" >
                   <h2>
                     ReVamp your ToDo-list project
                   </h2>
                 
                   <div class="button-container">
   
-                    <button>
+                    <button id="done" class="button-done">
                       <i class="bi bi-check-circle-fill"></i>
                     </button>
-                    <button>
+                    <button id="delete" class="button-delete">
                       <i class="bi bi-trash3"></i>
                     </button>
                   </div>
-                  
-                </div>
-                <div class="task-desc">
+                  <div class="task-desc">
                   <p>
                     <b>Key Focus Areas:</b> <br>
                     <b>User Interface Refinement:</b>
@@ -173,8 +175,12 @@
                   Embrace a minimalist design approach to keep the interface clutter-free and focused on the essentials of task management.
                   </p>
                 </div>
+                  
+                
+                </div>
+                
 
-              </div>
+              
               
               
             </div>
@@ -182,16 +188,16 @@
         </div>
 
         <!-- Goals section -->
-        <div class="accordion-item">
+        <div class="accordion-item" id="goal-list">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
               Goals Section
             </button>
           </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-            <div class="accordion-body">
-              <div class="container">
-                <div class="task-list  mx-2 my-3">
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body" id="Goal-list">
+              
+                <div class="task-list container my-3">
                   <h2>
                     <strong>Becoming a Full Stack Developer</strong>
                   </h2>
@@ -206,38 +212,29 @@
                     </button>
                   </div>
                   
+                  <div class="task-desc">
+                    The overarching objective is to acquire the skills and knowledge necessary to become a proficient full stack developer. A full stack developer is someone who possesses expertise in both front-end and back-end technologies, allowing them to seamlessly navigate and contribute to all aspects of web development. This goal involves mastering a diverse set of technologies and tools to build robust, scalable, and user-centric web applications.</p>
+  
+  <p><strong>Key Focus Areas:</strong></p>
+  
+  <ol>
+      <li><strong>Front-End Development:</strong><br>
+          - Master HTML, CSS, and JavaScript to create visually appealing and responsive user interfaces.</li>
+  </ol>
+                  </div>
+  
+                  <div class="date-container">
+                    <input type="date" name="date" id="date">
+                  </div>
                 </div>
-                <div class="task-desc">
-                  The overarching objective is to acquire the skills and knowledge necessary to become a proficient full stack developer. A full stack developer is someone who possesses expertise in both front-end and back-end technologies, allowing them to seamlessly navigate and contribute to all aspects of web development. This goal involves mastering a diverse set of technologies and tools to build robust, scalable, and user-centric web applications.</p>
-
-<p><strong>Key Focus Areas:</strong></p>
-
-<ol>
-    <li><strong>Front-End Development:</strong><br>
-        - Master HTML, CSS, and JavaScript to create visually appealing and responsive user interfaces.</li>
-</ol>
-                </div>
-
-                <div class="date-container">
-                  <input type="date" name="date" id="date">
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
         
       </div>
-    </main>
-    </div>
-
-    <main>
-        
-    </main>
     
-
-
-
-
+    </div>
 
     <script src="./assests/scripts/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
